@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoBike SP  Aluguel de bikes por hora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+
+  <!-- LOGO -->
+  <a href="#inicio" class="logo">
+    <img src="logo1.png" alt="Logo EcoBike SP">
+    <span>EcoBike SP</span>
+  </a>
+
+  <!-- NAVEGACAO -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#planos">Planos</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#reservas">Reservas</a>
+  </nav>
+
+  <!-- BOTOES -->
+  <div class="acoes-header">
+    <a href="#reservas" class="btn-comecar">Começar agora →</a>
+
+    <button id="btnTema" type="button">
+      🌙 Modo escuro
+    </button>
+  </div>
+
+</header>
+   
+  <main>
+    <!-- TODO 2: seção hero com h1, parágrafo e botão "Simular agora" -->
+ 
+<section class="hero" id="inicio">
+
+  <!-- CONTEÚDO DO BANNER -->
+  <div class="hero-conteudo">
+
+    <h1>
+      Sua cidade.<br>
+      Seu ritmo. Sua <span>bike.</span>
+    </h1>
+
+    <p class="hero-descricao">
+      Mobilidade urbana sustentável,
+      prática e acessível em São Paulo.
+    </p>
+
+    <div class="hero-acoes">
+
+      <a href="#planos" class="btn-hero">
+        Escolher minha bike →
+      </a>
+
+      <div class="hero-mensagem">
+       
+        <p>
+          Pedale mais,<br>
+          simplifique o caminho.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- IMAGEM DO BANNER -->
+  <div class="hero-imagem">
+    <img
+      src="fotobanner.jpg"
+      alt="Pessoa utilizando uma bicicleta em uma ciclovia de São Paulo"
+    >
+  </div>
+
+</section>
+
+
+    <!-- TODO 3: três article.card (Urbana R$ 12/h, Elétrica R$ 20/h, Cargo R$ 25/h) -->
+    
+<!-- PLANOS DE BICICLETAS -->
+<section id="planos">
+
+  <div class="titulo-secao">
+    <h2>Escolha sua experiência</h2>
+    <span></span>
+  </div>
+
+  <div class="cards">
+
+    <!-- BIKE URBANA -->
+    <article class="card">
+      <img src="urbana.jpg" alt="Bicicleta urbana verde">
+
+      <div class="card-info">
+        <h3>Urbana</h3>
+        <p>Ideal para o dia a dia na cidade.</p>
+        <strong>R$ 12/h</strong>
+      </div>
+    </article>
+
+    <!-- BIKE ELÉTRICA -->
+    <article class="card">
+      <img src="eletrica.jpg" alt="Bicicleta elétrica">
+
+      <div class="card-info">
+        <h3>Elétrica</h3>
+        <p>Mais potência para ir mais longe.</p>
+        <strong>R$ 20/h</strong>
+      </div>
+    </article>
+
+    <!-- BIKE CARGO -->
+    <article class="card">
+      <img src="cargo.jpg" alt="Bicicleta cargo">
+
+      <div class="card-info">
+        <h3>Cargo</h3>
+        <p>Transporte prático para o que você precisa.</p>
+        <strong>R$ 25/h</strong>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- Simulador: NÃO mude os ids, o JavaScript depende deles -->
+
+<!-- SIMULADOR E PRÉ-RESERVA -->
+<div class="area-interativa">
+
+  <!-- SIMULADOR -->
+  <section id="simulador">
+
+    <div class="titulo-interativo">
+      <span class="icone-secao">▦</span>
+      <h2>Simule sua pedalada</h2>
+    </div>
+
+    <div class="simulador-conteudo">
+
+      <div class="campo">
+        <label for="horas">Quantas horas?</label>
+        <input
+          type="number"
+          id="horas"
+          min="1"
+          max="24"
+          placeholder="Ex.: 2"
+        >
+      </div>
+
+      <div class="campo">
+        <label for="tipo">Qual tipo de bike?</label>
+
+        <select id="tipo">
+          <option value="urbana">Urbana</option>
+          <option value="eletrica">Elétrica</option>
+          <option value="cargo">Cargo</option>
+        </select>
+      </div>
+
+      <div class="campo campo-resultado">
+        <label>Preço estimado:</label>
+
+        <button id="calcular" type="button">
+          Calcular
+        </button>
+
+        <p id="resultado"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRÉ-RESERVA -->
+  <section id="reservas">
+
+    <div class="titulo-interativo">
+      <span class="icone-secao">▣</span>
+      <h2>Faça sua pré-reserva</h2>
+    </div>
+
+    <p class="reserva-descricao">
+      Informe seu nome e garanta sua bike!
+    </p>
+
+    <div class="reserva-conteudo">
+
+      <label for="nome" class="texto-acessivel">
+        Seu nome
+      </label>
+
+      <input
+        type="text"
+        id="nome"
+        placeholder="Seu nome completo"
+      >
+
+      <button id="adicionar" type="button">
+        Reservar agora →
+      </button>
+
+    </div>
+
+    <p class="contador-reservas">
+      Total de reservas: <span id="total">0</span>
+    </p>
+
+    <ul id="lista"></ul>
+
+  </section>
+
+</div>
+
+  </main>
+
+  <!-- TODO 4: footer com contato -->
+
+<!-- RODAPÉ -->
+<footer>
+
+  <div class="footer-logo">
+     <img src="Logo2.jpg" alt="Logo EcoBike SP">
+  </div>
+
+  <div class="footer-divisor"></div>
+
+  <div class="footer-mensagem">
+   
+    <p>Uma São Paulo mais verde, sobre duas rodas.</p>
+  </div>
+
+
+<div class="footer-social">
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/5511999999999"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Fale conosco pelo WhatsApp"
+  >
+    <img src="whatsapp-icone.png" alt="WhatsApp">
+  </a>
+
+</div>
+  <div class="footer-social1">
+  <!-- INSTAGRAM -->
+  <a
+    href="https://www.instagram.com/seuusuario/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visite nosso Instagram"
+  >
+    <img src="instagram.png" alt="Instagram">
+  </a>
+
+  
+</div>
+
+
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
